@@ -13,7 +13,7 @@ class Agence extends Model
     //definir les contrainte
     public function regions()
     {
-        return $this->hasMany('App\Region');
+        return $this->belongsTo('App\Region');
         //pour dir que dans une region on peut avoir plusieurs agences
     }
 }

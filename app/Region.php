@@ -11,9 +11,9 @@ class Region extends Model
     public static $rules = array('nom'=>'required|min:2');  
     //definir les contrainte
 
-    public function regions()
+    public function agences()
     {
-        return $this->belongsTo('App\Agence');
+        return $this->hasMany('App\Agence');
         //pour dir que l'agence est associe a une region
     }
 
