@@ -24,4 +24,10 @@ class Client extends Model
         return $this->belongsTo('App\Employeur');
         //pour dir que un client peut avoir un seul emp
     }
+
+    public function comptes()
+    {
+        return $this->hasMany('App\Compte');
+        //pour dir que un client p avoir plisieur compte
+    }
 }

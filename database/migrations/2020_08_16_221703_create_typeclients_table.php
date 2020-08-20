@@ -14,7 +14,8 @@ class CreateTypeclientsTable extends Migration
     public function up()
     {
         Schema::create('typeclients', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->string('libelle');
             $table->timestamps();
         });
     }

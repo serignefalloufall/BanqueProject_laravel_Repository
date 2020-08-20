@@ -16,4 +16,11 @@ class Agence extends Model
         return $this->belongsTo('App\Region');
         //pour dir que dans une region on peut avoir plusieurs agences
     }
+
+
+    public function comptes()
+    {
+        return $this->hasMany('App\Compte');
+        //pour dir que le typeclient est associe a plisieur client
+    }
 }

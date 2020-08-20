@@ -14,7 +14,11 @@ class CreateEmployeursTable extends Migration
     public function up()
     {
         Schema::create('employeurs', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->string('numIdentification');
+            $table->string('raisonSocial');
+            $table->string('nom_employeur');
+            $table->string('adresse_employeur');
             $table->timestamps();
         });
     }

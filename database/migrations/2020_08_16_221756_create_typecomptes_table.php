@@ -14,7 +14,8 @@ class CreateTypecomptesTable extends Migration
     public function up()
     {
         Schema::create('typecomptes', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->string('libelle');
             $table->timestamps();
         });
     }
