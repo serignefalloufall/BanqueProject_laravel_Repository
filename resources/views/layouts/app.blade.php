@@ -18,8 +18,14 @@
         <nav>
             <ul class="menu">
                 <li class="logo"><a href="#">La banque du peuple</a></li>
-                <li class="item"><a href="{{ route('addregion') }}">Gestion des clients</a></li>
-                <li class="item"><a href="{{ route('listeregion') }}">Gestion des comptes client</a></li>
+                <li class="item"><a href="{{ route('addregion') }}">Gestion des region</a></li>
+                <li class="item"><a href="{{ route('listeregion') }}">Liste region</a></li>
+
+                <li class="item"><a href="{{ route('addclient') }}">Gestion des clients</a></li>
+                <li class="item"><a href="{{ route('listeclient') }}">Liste clients</a></li>
+
+                <li class="item"><a href="{{ route('addcompte') }}">Gestion des comptes</a></li>
+                <li class="item"><a href="{{ route('listecompte') }}">Liste comptes</a></li>
             </ul>
         </nav>
         

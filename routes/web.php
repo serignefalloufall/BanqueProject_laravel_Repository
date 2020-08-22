@@ -29,6 +29,18 @@ Route::get('/region/delete/{id}', 'RegionController@delete')->name('deleteregion
 Route::get('/region/liste', 'RegionController@liste')->name('listeregion');
 Route::post('/region/persist', 'RegionController@persist')->name('persistregion');
 
+Route::get('/client/add', 'ClientController@add')->name('addclient');
+Route::get('/client/edit/{id}', 'ClientController@edit')->name('editclient');
+Route::post('/client/update', 'ClientController@update')->name('updateclient');
+Route::get('/client/delete/{id}', 'ClientController@delete')->name('deleteclient');
+Route::get('/client/liste', 'ClientController@liste')->name('listeclient');
+Route::post('/client/persist', 'ClientController@persist')->name('persistclient');
 
+Route::get('/compte/add', 'CompteController@add')->name('addcompte');
+Route::get('/compte/edit/{id}', 'CompteController@edit')->name('editcompte');
+Route::post('/compte/update', 'CompteController@update')->name('updatecompte');
+Route::get('/compte/delete/{id}', 'CompteController@delete')->name('deletecompte');
+Route::get('/compte/liste', 'CompteController@liste')->name('listecompte');
+Route::post('/compte/persist', 'CompteController@persist')->name('persistcompte');
 
 

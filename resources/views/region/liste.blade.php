@@ -19,18 +19,20 @@
 									<tr>
 										<td>{{ $region->id }}</td>
 										<td>{{ $region->nom }}</td>
-										<td><a class="link" href="{{ route('editregion', ['id'=>$region->id]) }}">Editer</a></td>
-										<td><a class="link" href="{{ route('deleteregion', ['id'=>$region->id]) }}">Suprimer</a></td>
+										<td><a class="link" href="{{ route('editregion', ['id'=>$region->id]) }}" onclick = "return confirm('Voulez-vous reelement modifier ?');">Editer</a></td>
+										<td><a class="link" href="{{ route('deleteregion', ['id'=>$region->id]) }}" onclick = "return confirm('Voulez-vous reelement suprimer ?');">Suprimer</a></td>
 									</tr>
 									@endforeach
 								@endif
 							@endif
 						</table>
-				
+
 			</div>
 		  </div>
+		 {{-- $regions->links() --}}
+
 		  <button class="btna">
-			<a class="link" href="{{ route('addregion') }}">Nouveau client</a>
+			<a class="link" href="{{ route('addregion') }}">New region</a>
 		</button>	
         </fieldset>
     </div>
