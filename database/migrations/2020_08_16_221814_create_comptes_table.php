@@ -21,7 +21,7 @@ class CreateComptesTable extends Migration
             $table->foreign('clients_id')->references('id')->on('clients');
 
             $table->integer('typecomptes_id')->unsigned();
-            $table->foreign('typecomptes_id')->references('id')->on('comptes');
+            $table->foreign('typecomptes_id')->references('id')->on('typecomptes');
 
             $table->integer('agences_id')->unsigned();
             $table->foreign('agences_id')->references('id')->on('agences');

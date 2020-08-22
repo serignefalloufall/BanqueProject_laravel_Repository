@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,18 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/region/add', 'RegionController@add')->name('addregion');
+Route::get('/region/edit/{id}', 'RegionController@edit')->name('editregion');
+Route::post('/region/update', 'RegionController@update')->name('updateregion');
+Route::get('/region/delete/{id}', 'RegionController@delete')->name('deleteregion');
+Route::get('/region/liste', 'RegionController@liste')->name('listeregion');
+Route::post('/region/persist', 'RegionController@persist')->name('persistregion');
+
+
+
+
