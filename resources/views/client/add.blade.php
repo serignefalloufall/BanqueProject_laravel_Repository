@@ -27,14 +27,14 @@
               >
                 <option value="">Choisir un type de client</option>
                 @if(isset($typeclients))
-				@if($typeclients != null)
-				@foreach ($typeclients as $t_client)
+                @if($typeclients != null)
+                @foreach ($typeclients as $t_client)
                 <option value="{{$t_client->id}}">
                     {{$t_client->libelle}}
                 </option>
                 @endforeach
-				@endif
-				@endif
+                @endif
+                @endif
               </select>
             </div>
 

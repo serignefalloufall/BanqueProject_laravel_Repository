@@ -28,8 +28,6 @@ class ClientController extends Controller
                 $emp->raisonSocial = $request->raisonSocial;
                 $emp->nom_employeur = $request->nom_employeur;
                 $emp->adresse_employeur = $request->adresse_employeur;
-                $client->profession = $request->profession;
-                $client->salaire = $request->salaire;
 
                 $data['ok'] = $emp->save();
                 return view('client.add',$data);
